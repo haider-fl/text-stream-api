@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Typewriter SSE Interface</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #chatContainer {
+            width: 90%;
+            max-width: 800px;
+            height: 600px;
+            border: 1px solid #ced4da;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 10px;
+            position: relative;
+            overflow-y: auto;
+        }
+        #messages {
+            white-space: pre-wrap; /* Allows text to wrap and preserves whitespace */
+            word-wrap: break-word; /* Ensures long words do not cause horizontal scrolling */
+            overflow-y: auto; /* Allows vertical scrolling */
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatContainer">
+        <div id="messages"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
